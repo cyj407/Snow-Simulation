@@ -206,3 +206,47 @@ Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: disassembleShader
+  api=4 insize=2282 outsize=3937 ok=1
+Cmd: disassembleShader
+  api=4 insize=1834 outsize=3394 ok=1
+Cmd: disassembleShader
+  api=4 insize=3518 outsize=5596 ok=1
+Cmd: disassembleShader
+  api=4 insize=3518 outsize=5596 ok=1
+Cmd: disassembleShader
+  api=4 insize=2390 outsize=4093 ok=1
+Cmd: disassembleShader
+  api=4 insize=1942 outsize=3550 ok=1
+Cmd: disassembleShader
+  api=4 insize=3382 outsize=5407 ok=1
+Cmd: disassembleShader
+  api=4 insize=4226 outsize=6553 ok=1
+Cmd: disassembleShader
+  api=4 insize=4062 outsize=6304 ok=1
+Cmd: disassembleShader
+  api=4 insize=4062 outsize=6304 ok=1
+Cmd: disassembleShader
+  api=4 insize=4062 outsize=6304 ok=1
+Cmd: disassembleShader
+  api=4 insize=5930 outsize=8815 ok=1
+Cmd: disassembleShader
+  api=4 insize=5502 outsize=8106 ok=1
+Cmd: disassembleShader
+  api=4 insize=5502 outsize=8106 ok=1
+Cmd: disassembleShader
+  api=4 insize=690 outsize=1441 ok=1
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler

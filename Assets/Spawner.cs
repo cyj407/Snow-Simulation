@@ -11,6 +11,11 @@ public class Spawner : MonoBehaviour {
     System.Random rand = new System.Random();
     int x, y, z;
     float opacity = 0.5f;
+
+
+    // used to save tree
+    Material tree_material;
+
     void Start ()
     {
         time = 0.0f;
@@ -23,6 +28,21 @@ public class Spawner : MonoBehaviour {
             d.parent = transform;
             d.localPosition = new Vector3(x, y, z);
         }
+
+        Material[] materialsArray;
+        GameObject tree1;
+        tree1 = GameObject.Find("/Birch_1");
+
+        materialsArray = tree1.GetComponent<Renderer>().materials;
+        foreach (Material material in materialsArray)
+        {
+            if (material.name == "trees_atp_alder_branch_sm2_dead (Instance)")
+            {
+                tree_material = material;
+            }
+        }
+
+        print(tree_material.ToString());
     }
     
     // Update is called once per frame
@@ -44,10 +64,12 @@ public class Spawner : MonoBehaviour {
             GameObject house2;
             GameObject house3;
             GameObject tree1;
+            GameObject car;
             house1 = GameObject.Find("/SanFranciscoHouseYellow3/polySurface2052");
             house2 = GameObject.Find("/SanFranciscoHouseYellow2/polySurface2052");
             house3 = GameObject.Find("/SanFranciscoHouseBlue/polySurface2052");
             tree1 = GameObject.Find("/Birch_1");
+            car = GameObject.Find("/GAZ-66/Gaz-66");
 
             opacity += 0.01f;
             if (opacity <= 2)
@@ -55,8 +77,8 @@ public class Spawner : MonoBehaviour {
                 house1.GetComponent<Renderer>().sharedMaterial.SetFloat("Vector1_2649093F", opacity);
                 house2.GetComponent<Renderer>().sharedMaterial.SetFloat("Vector1_2649093F", opacity);
                 house3.GetComponent<Renderer>().sharedMaterial.SetFloat("Vector1_2649093F", opacity);
-                tree1.GetComponent<Renderer>().sharedMaterial.SetFloat("Vector1_2649093F", opacity);
-                print(tree1.GetComponent<Renderer>().sharedMaterial.GetPassName(1));
+                tree_material.SetFloat("Vector1_2649093F", opacity);
+                car.GetComponent<Renderer>().sharedMaterial.SetFloat("Vector1_2649093F", opacity);
             }
         }
     }
