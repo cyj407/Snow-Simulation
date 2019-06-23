@@ -14,6 +14,18 @@ MonoBehaviour:
   m_Keys:
   - __PanelContainer__rootVisualContainer__2af9b7a9bf5db964c9e70438d69008bd__MaterialGraphView__UnityEditor.Experimental.UIElements.GraphView.GraphView+PersistedViewTransform
   - __PanelContainer__rootVisualContainer__2af9b7a9bf5db964c9e70438d69008bd__MaterialGraphView__UnityEditor.Experimental.UIElements.GraphView.GraphView+PersistedSelection
+  - __PanelContainer__rootVisualContainer__a447b0cb5a60b524eb0eacf7afbeb3ee__MaterialGraphView__UnityEditor.Experimental.UIElements.GraphView.GraphView+PersistedViewTransform
+  - __PanelContainer__rootVisualContainer__a447b0cb5a60b524eb0eacf7afbeb3ee__MaterialGraphView__UnityEditor.Experimental.UIElements.GraphView.GraphView+PersistedSelection
+  - __PanelContainer__rootVisualContainer__7c74019c81d174140b511e93edad0cf2__MaterialGraphView__UnityEditor.Experimental.UIElements.GraphView.GraphView+PersistedViewTransform
+  - __PanelContainer__rootVisualContainer__7c74019c81d174140b511e93edad0cf2__MaterialGraphView__UnityEditor.Experimental.UIElements.GraphView.GraphView+PersistedSelection
+  - __PanelContainer__rootVisualContainer__cf65e87143886a34fb8242758181340b__MaterialGraphView__UnityEditor.Experimental.UIElements.GraphView.GraphView+PersistedViewTransform
+  - __PanelContainer__rootVisualContainer__cf65e87143886a34fb8242758181340b__MaterialGraphView__UnityEditor.Experimental.UIElements.GraphView.GraphView+PersistedSelection
   m_Values:
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
   - '{"position":{"x":1659.066162109375,"y":494.60333251953127,"z":0.0},"scale":{"x":0.44535577297210696,"y":0.44535577297210696,"z":1.0}}'
-  - '{"m_Version":1,"m_SelectedElements":[]}'
+  - '{"m_Version":5,"m_SelectedElements":[]}'

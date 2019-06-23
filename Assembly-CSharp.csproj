@@ -63,6 +63,7 @@
     <Compile Include="Assets\SpawnController.cs" />
     <Compile Include="Assets\Spawner.cs" />
     <Compile Include="Assets\WindArea.cs" />
+    <None Include="Assets\Packs\BirchPackVol1\Works For Fun.txt" />
     <None Include="Assets\Meshtint Free Santa Claus\www.meshtint.com.txt" />
     <None Include="Assets\Meshtint Free Santa Claus\Read me.txt" />
     <Reference Include="Unity.PackageManagerUI.Editor">
