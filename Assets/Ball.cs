@@ -52,11 +52,11 @@ public class Ball : MonoBehaviour {
     private void FixedUpdate()
     {
        if(obj_name != "Sphere" && !stop && inWindZone) {
-       		float Ufluid =  windZone.GetComponent<WindArea>().strength;
-          Vector3 force = windZone.GetComponent<WindArea>().direction * Ufluid * Ufluid * mass * -9.8f / 2.25f;
-          rb.AddForce(force);
-          xForce = force.x;
-          zForce = force.z;
+       		float Ufluid =  windZone.GetComponent<WindArea>().velocity;
+            Vector3 force = windZone.GetComponent<WindArea>().direction * Ufluid * Ufluid * mass * -9.8f / 2.25f;
+            rb.AddForce(force);
+            xForce = force.x;
+            zForce = force.z;
        }
     }
 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WindArea : MonoBehaviour {
 
-    public float strength;
+    public float velocity;
     public Vector3 direction;
 
 }

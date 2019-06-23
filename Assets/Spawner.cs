@@ -5,7 +5,7 @@ using UnityEngine;
 public class Spawner : MonoBehaviour {
 
     public Transform snow;
-    public int spawnAmount = 100;
+    public int spawnAmount = 200;
     private float time;
     // Use this for initialization
     System.Random rand = new System.Random();
