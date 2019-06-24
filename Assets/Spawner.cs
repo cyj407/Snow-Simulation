@@ -6,11 +6,14 @@ public class Spawner : MonoBehaviour {
 
     public Transform snow;
     public int spawnAmount = 200;
+
+    private float delta = 0.005f;
     private float time;
     // Use this for initialization
     System.Random rand = new System.Random();
-    int x, y, z;
-    float opacity = 0.5f;
+    private int x, y, z;
+    private float opacity = 0.5f;
+    private float ground_opacity = 0.0f;
 
 
     // used to save tree
@@ -65,13 +68,20 @@ public class Spawner : MonoBehaviour {
             GameObject house3;
             GameObject tree1;
             GameObject car;
+            GameObject ground;
             house1 = GameObject.Find("/SanFranciscoHouseYellow3/polySurface2052");
             house2 = GameObject.Find("/SanFranciscoHouseYellow2/polySurface2052");
             house3 = GameObject.Find("/SanFranciscoHouseBlue/polySurface2052");
             tree1 = GameObject.Find("/Birch_1");
             car = GameObject.Find("/GAZ-66/Gaz-66");
+            ground = GameObject.Find("/Ground");
 
-            opacity += 0.01f;
+            if(ground_opacity <= 0.75)
+            {
+                ground.GetComponent<Renderer>().sharedMaterial.SetFloat("Vector1_2649093F", ground_opacity);
+                ground_opacity += delta;
+            }
+            
             if (opacity <= 2)
             {
                 house1.GetComponent<Renderer>().sharedMaterial.SetFloat("Vector1_2649093F", opacity);
@@ -79,6 +89,7 @@ public class Spawner : MonoBehaviour {
                 house3.GetComponent<Renderer>().sharedMaterial.SetFloat("Vector1_2649093F", opacity);
                 tree_material.SetFloat("Vector1_2649093F", opacity);
                 car.GetComponent<Renderer>().sharedMaterial.SetFloat("Vector1_2649093F", opacity);
+                opacity += delta;
             }
         }
     }

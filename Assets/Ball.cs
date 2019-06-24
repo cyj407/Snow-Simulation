@@ -13,6 +13,9 @@ public class Ball : MonoBehaviour {
   private float lifeTime = 0.0f;
   private float maxLifeTime = 5.0f;
 
+    private Vector3 position, velocity, acceleration;
+    private float deltaTime = 0.1f;
+
     Rigidbody rb;
 
     private void Start()
@@ -31,23 +34,24 @@ public class Ball : MonoBehaviour {
     // Update is called once per frame
     void Update()
 	{
-    lifeTime += Time.deltaTime;
+        lifeTime += Time.deltaTime;
 		if (transform.position.y <= -10)
 		{
 			Destruction();
 		}
-    if (lifeTime > maxLifeTime && name != "Sphere")
-    {
-      Destruction();
-    }
+        if (lifeTime > maxLifeTime && name != "Sphere")
+        {
+          Destruction();
+        }
 
-    if (transform.position.y <= 0.3)
-    {
-      stop = true;
-      //rb.AddForce(new Vector3(-xForce, 0.0f, -zForce));
-      rb.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionZ;
-    }
+        if (transform.position.y <= 0.3)
+        {
+          stop = true;
+          //rb.AddForce(new Vector3(-xForce, 0.0f, -zForce));
+          rb.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionZ;
+        }
 	}
+    
 
     private void FixedUpdate()
     {
@@ -57,7 +61,7 @@ public class Ball : MonoBehaviour {
             rb.AddForce(force);
             xForce = force.x;
             zForce = force.z;
-       }
+        }
     }
 
     void OnTriggerEnter(Collider coll) {
