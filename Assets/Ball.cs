@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Ball : MonoBehaviour {
-	private float mass;
+  private float mass;
   public bool inWindZone = false;
   public bool stop = false;
   public GameObject windZone;
@@ -12,9 +12,7 @@ public class Ball : MonoBehaviour {
   private string obj_name;
   private float lifeTime = 0.0f;
   private float maxLifeTime = 5.0f;
-
-    private Vector3 position, velocity, acceleration;
-    private float deltaTime = 0.1f;
+  System.Random rand = new System.Random();
 
     Rigidbody rb;
 
@@ -59,8 +57,6 @@ public class Ball : MonoBehaviour {
        		float Ufluid =  windZone.GetComponent<WindArea>().velocity;
             Vector3 force = windZone.GetComponent<WindArea>().direction * Ufluid * Ufluid * mass * -9.8f / 2.25f;
             rb.AddForce(force);
-            xForce = force.x;
-            zForce = force.z;
         }
     }
 
