@@ -86,23 +86,23 @@ public class test : MonoBehaviour
     {
         if (obj_name != "Sphere" && !stop && inWindZone)
         {
-            float curV_x = (gameObject.transform.position.x - xPos)/Time.deltaTime;
-            float curV_y = (gameObject.transform.position.y - yPos)/Time.deltaTime;
-            float curV_z = (gameObject.transform.position.z - zPos)/Time.deltaTime;
+            float curV_x = (gameObject.transform.position.x - xPos) / Time.deltaTime;
+            float curV_y = (gameObject.transform.position.y - yPos) / Time.deltaTime;
+            float curV_z = (gameObject.transform.position.z - zPos) / Time.deltaTime;
             xPos = gameObject.transform.position.x;
             yPos = gameObject.transform.position.y;
             zPos = gameObject.transform.position.z;
             Vector3 cur_v = new Vector3(curV_x, curV_y, curV_z);
             Vector3 Wind_direction = windZone.GetComponent<WindArea>().direction;
             Vector3 Ufluid = windZone.GetComponent<WindArea>().velocity * Wind_direction - cur_v;
-            Vector3 force = (Ufluid/Ufluid.magnitude)*Ufluid.magnitude * Ufluid.magnitude * mass * -9.8f / 2.25f;
+            Vector3 force = (Ufluid / Ufluid.magnitude) * Ufluid.magnitude * Ufluid.magnitude * mass * -9.8f / 2.25f;
             rb.AddForce(force.x, -9.8f, force.z);
             //xForce = force.x;
             //zForce = force.z;
 
 
 
-//            print(gameObject.transform.position.y);
+            //            print(gameObject.transform.position.y);
 
             // test
             /*
@@ -111,7 +111,6 @@ public class test : MonoBehaviour
             Vector3 v3 = deltaTime * computeV(0.5f* deltaTime);
             Vector3 v4 = deltaTime * computeV(deltaTime);
             this.transform.position = this.transform.position + (1.0f / 6.0f) * (v1 + 2.0f*v2 + 2.0f * v3 + v4);
-
             Vector3 a1 = deltaTime * computeA(0, velocity);
             Vector3 a2 = deltaTime * computeA(0.5f*deltaTime, velocity+0.5f*a1);
             Vector3 a3 = deltaTime * computeA(0.5f*deltaTime, velocity+0.5f*a2);

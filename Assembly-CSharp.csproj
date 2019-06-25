@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Ball.cs" />
+    <Compile Include="Assets\pureFormula.cs" />
     <Compile Include="Assets\SpawnController.cs" />
     <Compile Include="Assets\Spawner.cs" />
     <Compile Include="Assets\test.cs" />

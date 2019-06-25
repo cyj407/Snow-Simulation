@@ -44,8 +44,6 @@ public class Spawner : MonoBehaviour {
                 tree_material = material;
             }
         }
-
-        print(tree_material.ToString());
     }
     
     // Update is called once per frame
