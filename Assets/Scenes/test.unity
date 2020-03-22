@@ -821,7 +821,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   snow: {fileID: 957020484}
-  spawnAmount: 15
+  spawnAmount: 50
 --- !u!114 &2143728276
 MonoBehaviour:
   m_ObjectHideFlags: 0
